@@ -47,11 +47,11 @@ evento.append(datos, horario);
 
 
 /* Funciones para insertar el evento en el listado*/
-let listado = document.querySelector("#lista-eventos");
+var listado = document.querySelector("#lista-eventos");
+var arrayEventos = []
 
-function armarListado(){
-    let arrayEventos = [];
-
+function llenarLista(){
+    
     if( arrayEventos = []){
         arrayEventos.push(evento)
     } else{
@@ -59,7 +59,9 @@ function armarListado(){
     }
 };
 
-
+function armarListado(){
+    listado.appendChild(evento)
+}
 
 
 
