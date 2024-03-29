@@ -7,7 +7,7 @@ body{
     background-attachment: fixed;
     background-position: center;
     font-family: "Montserrat", sans-serif;
-    scrollbar-width: none;
+    scrollbar-width: thin;
 }
 
 header{
@@ -53,7 +53,7 @@ main{
 h2{
     margin: 0;
     padding: 0;
-    font-size: 2rem;
+    font-size: 2em;
     margin-left:1.6em;
 }
 
@@ -70,9 +70,12 @@ h2{
 .lista-eventos{
     width: 95%;
     height: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .evento{
+    min-width: 290px;
     margin-top: 1em;
     border: solid 0.12em ;
     border-radius: .5em;
@@ -83,13 +86,15 @@ h2{
     justify-content: space-between;
     align-items: center;
     padding-left: 1em;
-    
+    text-overflow: ellipsis;
+
 }
 
 .datos{
     width: 75%;
     display: flex;
     flex-direction: column;
+
 }
 
 .encabezado-evento{
@@ -116,30 +121,150 @@ h2{
     font-size: 250%;
     font-weight: bold;
     text-transform: uppercase;
+    white-space: nowrap;
     overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .horario{
     width: 20%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.texto-hora{
+.hora-evento, .reloj{
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     font-size: 150%;
     text-transform: uppercase;
+    justify-content: center;
+    margin: auto;
 }
 
 .evento:hover{
-    transform: scale(102%) translate3d(1%, -1%, 0);
     background: linear-gradient(25deg, blue 10%, lightblue 50%, rgb(233, 233, 233));
     transition: all .2s ease-in-out;
     .texto-servicio{
         font-size: 300%;
-        
+        margin-bottom: 0;
+        letter-spacing: .2em;
     };
+    .encabezado-evento{
+        margin-bottom: -.1em;
+    }
+}
+
+
+
+
+
+@media (width <= 460px) {
+
+    .nav-list{
+        height: 100%;
+        margin: 0 2em;
+        padding: 0;
+        display: flex;
+        gap: 2em;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .main{
+        margin: 2em 1em 0 1em;
+    }
+    
+    h2{
+        text-align: center;
+        margin: 0 1em;
+        padding: 0;
+        font-size: 2rem;
+    }
+
+    .gestor-eventos{
+        max-width: 60em;
+        height: 70vh;
+        border-radius: 1em;
+        overflow-y: scroll;
+        scrollbar-width: none;
+        scrollbar-color: rgba(0, 0, 0, 0.5) transparent;
+        margin: 0 1em;
+    }
+
+    .lista-eventos{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .evento{
+        margin-top: 1em;
+        border: solid 0.12em;
+        border-radius: .5em;
+        gap: 0.5em 1.5em;
+        background: linear-gradient(25deg, slateblue 20%, blue 40%, grey 80%, rgb(233, 233, 233));
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding: 0;
+        text-overflow: ellipsis;
+    }
+
+    .datos{
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .encabezado-evento{
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        gap: .5em 1em;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .horario{
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hora-evento, .reloj{
+        display: flex;
+        font-size: 150%;
+        text-transform: uppercase;
+        justify-content: center;
+        margin: auto;
+    }
+
+    .evento:hover{
+        background: linear-gradient(25deg, blue 10%, lightblue 50%, rgb(233, 233, 233));
+        transition: all .2s ease-in-out;
+        .texto-servicio{
+            font-size: 250%;
+            margin-top: .1em;
+            letter-spacing: normal ;
+            margin-bottom: .2em;
+        };
+        .encabezado-evento{
+            margin-bottom: 0;
+        }
+    }
+
 }
