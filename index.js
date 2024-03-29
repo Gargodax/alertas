@@ -1,7 +1,7 @@
 //Plantilla de eventos (HTML) en el DOM mediante JS
 
 
-//Funciones para insertar el evento en el listado
+//Funciones para insertar el evento (plantilla) en el listado
 
 const listado = document.querySelector("#lista-eventos");
 var nombre = "Mimo & Co."
@@ -47,12 +47,15 @@ function crearEvento (nombre, numero, serv) {
     horaEvento.innerHTML = "HORA"
 
     var now = new Date();
-    var hora = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds()
+    var hora = now.getHours()<10? "0" + now.getHours() : now.getHours();
+    var minutos = now.getMinutes()<10? "0" + now.getMinutes() : now.getMinutes();
+    var segundos = now.getSeconds()<10? "0" + now.getSeconds() : now.getSeconds();
+    var reloj =  hora + ":" + minutos + ":" + segundos
 
     var textoHora = document.createElement("p");
     textoHora.setAttribute("class", "reloj");
     textoHora.setAttribute("id", "reloj");
-    textoHora.innerHTML = hora;
+    textoHora.innerHTML = reloj;
 
     evento.append(datos, horario);
     datos.append(encabezadoEvento,servicio);
@@ -73,5 +76,4 @@ function listarEvento (){
         listado.lastElementChild.remove()
     }
 };
-
 
