@@ -4,8 +4,8 @@
 //Funciones para insertar el evento (plantilla) en el listado
 
 const listado = document.querySelector("#lista-eventos");
-var nombre = "Mimo & Co."
-var numero = "(SOLE-N00-LO129)"
+var nombre = "Como quieres que te quiera"
+var numero = "(SOLE-N00-LO111)"
 var serv = "Seguridad"
 
 
@@ -64,16 +64,20 @@ function crearEvento (nombre, numero, serv) {
     horario.append(horaEvento,textoHora);
 
     
-        return evento
+    return evento
 };
 
-const novedad = crearEvento(nombre, numero, serv);
+//agregar al listado el evento y limitar la cantidad de hijos en el elemento padre.
 
 function listarEvento (){
     listado.prepend(crearEvento(nombre, numero, serv))
 
-    if (listado.childNodes.length > 4) {
+    if (listado.childNodes.length > 11) {
         listado.lastElementChild.remove()
     }
 };
+
+
+
+// Manejar los datos de locales.json
 

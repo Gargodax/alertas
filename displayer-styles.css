@@ -151,7 +151,7 @@ h2{
     .texto-servicio{
         font-size: 300%;
         margin-bottom: 0;
-        letter-spacing: .2em;
+        letter-spacing: .1em;
     };
     .encabezado-evento{
         margin-bottom: -.1em;
@@ -234,6 +234,18 @@ h2{
         flex-direction: column;
         flex-wrap: nowrap;
         justify-content: center;
+    }
+
+    .texto-servicio{
+        margin-top: .1em;
+        margin-bottom: .2em;
+        font-size: 250%;
+        font-weight: bold;
+        text-transform: uppercase;
+        white-space: wrap;
+        overflow: hidden;
+        text-align: center;
+        text-overflow: ellipsis;
     }
 
     .horario{

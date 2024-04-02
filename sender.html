@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emisor de alerta 📣</title>
+    <link rel="stylesheet" href="./sender-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <section class="sender-field" id="sender-field">
+        <h1 class="titleForm" id="titleForm">Emisor de alertas</h1>
+        <form action="" method="" class="sender-form" id="sender-form">
+
+            <h4 class="basicInfo" id="basicInfo">Información comercial</h4>
+
+            <div class="infoBox" id="infoBox">
+                <input type="text" name="nombrePosicion" class="nombrePosicion" id="nombrePosicion" readonly
+                    value="Como quieres que te quiera">
+                <input type="text" name="codigoPosicion" id="codigoPosicion" readonly value="SOLE-N00-LO110">
+            </div>
+
+            <h4 class="titleButtons" id="titleButtons">Seleccionar servicio</h4>
+
+            <select name="servicio" id="servicio">
+                <option value="seguridad">Seguridad</option>
+                <option value="emergencias">Emergencias</option>
+            </select>
+
+            <div class="buttonsBox" id="buttonsBox">
+                <button type="submit" class="send" id="send">Enviar</button>
+            </div>
+
+        </form>
+    </section>
+</body>
+
+</html>

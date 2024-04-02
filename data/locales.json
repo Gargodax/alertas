@@ -1,43 +1,43 @@
 [
     {
         "Nombre": "Local 1",
-        "Número": "001",
-        "Servicio":["Seguridad","Asistencia médica","Otros"]
+        "Numero": "001",
+        "Servicio": ["Seguridad", "Emergencias"]
 
     },
 
     {
         "Nombre": "Local 2",
-        "Número": "002",
-        "Servicio":["Seguridad","Asistencia médica","Otros"]
+        "Numero": "002",
+        "Servicio": ["Seguridad", "Emergencias"]
 
     },
 
     {
         "Nombre": "Local 3",
-        "Número": "003",
-        "Servicio":["Seguridad","Asistencia médica","Otros"]
+        "Numero": "003",
+        "Servicio": ["Seguridad", "Emergencias"]
 
     },
 
     {
         "Nombre": "Local 4",
-        "Número": "004",
-        "Servicio":["Seguridad","Asistencia médica","Otros"]
+        "Numero": "004",
+        "Servicio": ["Seguridad", "Emergencias"]
 
     },
 
     {
         "Nombre": "Local 5",
-        "Número": "005",
-        "Servicio":["Seguridad","Asistencia médica","Otros"]
+        "Numero": "005",
+        "Servicio": ["Seguridad", "Emergencias"]
 
     },
 
     {
         "Nombre": "Local 6",
-        "Número": "006",
-        "Servicio":["Seguridad","Asistencia médica","Otros"]
+        "Numero": "006",
+        "Servicio": ["Seguridad", "Emergencias"]
 
     }
 
