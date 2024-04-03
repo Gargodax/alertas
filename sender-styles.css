@@ -1,14 +1,15 @@
-body{
+body {
     margin: 0;
     padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    background-color: aliceblue;
 }
 
-.sender-field{
-    width:90%;
+.sender-field {
+    width: 90%;
     height: auto;
     padding-top: 2rem;
     display: flex;
@@ -16,7 +17,7 @@ body{
     align-items: center;
 }
 
-.sender-form{
+.sender-form {
     width: 90%;
     margin-top: 2rem;
     display: flex;
@@ -25,24 +26,28 @@ body{
     gap: 1em;
 }
 
-.titleForm, .basicInfo, .titleButtons{
+.titleForm,
+.basicInfo,
+.titleButtons {
     text-transform: uppercase;
     width: auto;
     text-align: center;
+    margin-bottom: .5em;
 }
 
-.infoBox, .buttonsBox{
+.infoBox,
+.buttonsBox {
     width: 100%;
     display: flex;
     justify-content: center;
     gap: 1em;
 }
 
-.infoBox{
+.infoBox {
     flex-direction: column;
 }
 
-.buttonsBox{
+.buttonsBox {
     flex-direction: row;
 }
 
@@ -56,43 +61,114 @@ input {
     text-align: center;
     text-transform: uppercase;
     font-size: 90%;
-  }
-  
+    font-weight: bold;
+}
 
-  .send {
+select {
+    margin-bottom: 2em;
+    width: 60%;
+    height: 2em;
+    border-radius: 100px;
+    text-align: center;
+    font-size: 90%;
+    font-weight: bold;
+    font-family: 'Montserrat', 'sans-serif';
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.send {
     width: 130px;
     height: 40px;
     color: #fff;
     border-radius: 5px;
     padding: 10px 25px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     background: transparent;
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
     display: inline-block;
-    box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
-      7px 7px 20px 0px rgba(0,0,0,.1),
-      4px 4px 5px 0px rgba(0,0,0,.1);
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
     outline: none;
-   }
-   
-   .send {
-    background: rgb(96,9,240);
-    background: linear-gradient(0deg, rgba(96,9,240,1) 0%, rgba(129,5,240,1) 100%);
+}
+
+.send {
+    background: rgb(64, 173, 85);
+    background: linear-gradient(0deg, rgb(5, 119, 28) 0%, rgb(20, 212, 59) 100%);
     border: none;
-   }
-   
-   .send:before {
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: .1em;
+    font-size: 110%;
+}
+
+.send:before {
     height: 0%;
     width: 2px;
-   }
-   
-   .send:hover {
-    box-shadow: 4px 4px 6px 0 rgba(255,255,255,.5),
-                 -4px -4px 6px 0 rgba(116, 125, 136, .5), 
-       inset -4px -4px 6px 0 rgba(255,255,255,.2),
-       inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
-   }
-   
+}
+
+.send:hover {
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
+        -4px -4px 6px 0 rgba(116, 125, 136, .5),
+        inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
+        inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+}
+
+.buttonsBox {
+    margin-top: 1.5em;
+}
+
+@media (width > 375px) {
+
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Montserrat', sans-serif;
+        background-color: #fcfcfc;
+    }
+
+    .sender-field {
+        width: 500px;
+        height: 600px;
+        border: solid black 1px;
+        border-radius: 1em;
+        margin-top: 2em;
+        background-color: aliceblue;
+        box-shadow: rgba(0, 0, 0, 0.5) 20px 30px 40px;
+    }
+
+    input {
+        border: none;
+        outline: none;
+        border-radius: 100px;
+        padding: 1em;
+        background-color: #e1e2e3;
+        box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 110%;
+        font-weight: bold;
+    }
+
+
+    select {
+        margin-bottom: 2em;
+        width: 60%;
+        height: 2em;
+        border-radius: 100px;
+        text-align: center;
+        font-size: 110%;
+        font-weight: bold;
+        font-family: 'Montserrat', 'sans-serif';
+        text-transform: uppercase;
+        cursor: pointer;
+        background-color: transparent;
+    }
+}
