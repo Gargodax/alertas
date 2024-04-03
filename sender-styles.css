@@ -122,7 +122,7 @@ select {
     margin-top: 1.5em;
 }
 
-@media (width > 375px) {
+@media (width > 412px) {
 
     body {
         margin: 0;
