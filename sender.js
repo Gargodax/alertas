@@ -27,12 +27,14 @@ function insertData () {
 
 function sendParams (e) {
     e.preventDefault()
-
+    let message = ''
     let form =new FormData(this)
     form.forEach(element => {
         
-        console.log(element)
+        message += element + '\n'
+        
     });
+    alert('\n Se envió alerta con la siguiente información:\n\n' + message)
 }
 
 senderForm.addEventListener('submit', sendParams)
