@@ -13,14 +13,13 @@
 <body>
     <section class="sender-field" id="sender-field">
         <h1 class="titleForm" id="titleForm">Emisor de alertas</h1>
-        <form action="" method="" class="sender-form" id="sender-form">
+        <form action="./displayer.html" method="post" class="sender-form" id="sender-form">
 
             <h4 class="basicInfo" id="basicInfo">Información comercial</h4>
 
             <div class="infoBox" id="infoBox">
-                <input type="text" name="nombrePosicion" class="nombrePosicion" id="nombrePosicion" readonly
-                    value="Como quieres que te quiera">
-                <input type="text" name="codigoPosicion" id="codigoPosicion" readonly value="SOLE-N00-LO060">
+                <input type="text" name="nombrePosicion" class="nombrePosicion" id="nombrePosicion" readonly placeholder="Nombre de fantasía">
+                <input type="text" name="codigoPosicion" id="codigoPosicion" readonly placeholder="unidad comercial">
             </div>
             <br>
             <h4 class="titleButtons" id="titleButtons">Seleccionar servicio</h4>
@@ -36,6 +35,8 @@
 
         </form>
     </section>
+
+    <script src="./sender.js"></script>
 </body>
 
 </html>
