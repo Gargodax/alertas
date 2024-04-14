@@ -27,6 +27,11 @@ function insertData () {
 
 function sendParams (e) {
     e.preventDefault()
+
+    if ((nombreLocal.value == '') || (posicionLocal.value == '')) {
+        alert("Falta información de la unidad")
+    } else {
+        
     let message = ''
     let form =new FormData(this)
     form.forEach(element => {
@@ -35,7 +40,7 @@ function sendParams (e) {
         
     });
     alert('\n Se envió alerta con la siguiente información:\n\n' + message)
-}
+}};
 
 senderForm.addEventListener('submit', sendParams)
 
