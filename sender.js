@@ -30,7 +30,7 @@ function sendParams (e) {
     e.preventDefault()
 
     if ((nombreLocal.value == '') && (posicionLocal.value == '')) {
-        alert('\nInformación de unidad faltante.')
+        alert('\nPara enviar la alerte debe escanear el código QR correspondiente.')
     } else {
         
     var message =''
