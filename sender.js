@@ -30,7 +30,7 @@ function sendParams (e) {
     e.preventDefault()
 
     if ((nombreLocal.value == '') && (posicionLocal.value == '')) {
-        alert('\nPara enviar la alerte debe escanear el código QR correspondiente.')
+        alert('\nPara enviar la alerta debe escanear el código QR correspondiente.')
     } else {
         
     var message =''
