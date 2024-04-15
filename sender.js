@@ -14,6 +14,7 @@ const senderForm = document.querySelector('#sender-form')
 var nombreLocal = document.querySelector('#nombrePosicion')
 var posicionLocal = document.querySelector('#codigoPosicion')
 
+const sendButton = document.querySelector('#send')
 
 // Colocación de los parámetros recibidos en la URL en los campos del formulario
 
@@ -28,19 +29,21 @@ function insertData () {
 function sendParams (e) {
     e.preventDefault()
 
-    if ((nombreLocal.value == '') || (posicionLocal.value == '')) {
-        alert("Falta información de la unidad")
+    if ((nombreLocal.value == '') && (posicionLocal.value == '')) {
+        alert('\nInformación de unidad faltante.')
     } else {
         
-    let message = ''
-    let form =new FormData(this)
-    form.forEach(element => {
-        
-        message += element + '\n'
-        
-    });
-    alert('\n Se envió alerta con la siguiente información:\n\n' + message)
-}};
+    var message =''
+    let formData =new FormData(this)
+    let formArray = Array.from(formData)
+    let propsArray = ['Nombre de local', 'Posición', 'Servicio solicitado']
+    for (var prop in formArray) {
+        message += '\n' + '    ' + propsArray[prop] + ': ' + formArray[prop][1]
+    }
+    alert('\nSe envió alerta con la siguiente información:\n' + message)};
+
+};
 
 senderForm.addEventListener('submit', sendParams)
+
 
