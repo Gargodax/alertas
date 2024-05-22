@@ -5,6 +5,7 @@
 
 const listado = document.querySelector('#lista-eventos');
 
+
 var nombre = "Nombre de local"
 var numero = "Posición"
 var serv = "Emergencias"
@@ -12,9 +13,9 @@ var serv = "Emergencias"
 function crearEvento (nombre, numero, serv) {
 
     let evento = document.createElement("article");
-    evento.setAttribute("class", "evento");
+    evento.setAttribute("class", "evento blink");
     evento.setAttribute("id", "evento");
-    
+
     let datos = document.createElement("div");
     datos.setAttribute("class", "datos");
     
@@ -63,9 +64,14 @@ function crearEvento (nombre, numero, serv) {
         servicio.appendChild(textoServicio);
     horario.append(horaEvento,textoHora);
 
+    evento.addEventListener('click', function() {
+        evento.classList.remove('blink');
+    })
+
     return evento
 };
 
+item = crearEvento()
 //agregar al listado el evento y limitar la cantidad de hijos en el elemento padre.
 
 function listarEvento (nombre, numero, serv){

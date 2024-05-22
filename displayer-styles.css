@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0;
     padding: 0;
     background-image: url(../alertas/assets/images/web-background.jpg);
@@ -10,17 +10,17 @@ body{
     scrollbar-width: thin;
 }
 
-header{
+header {
     width: 100%;
 }
 
-nav{
+nav {
     width: 100%;
     height: 3em;
     background-color: black;
 }
 
-.nav-list{
+.nav-list {
     height: 100%;
     margin: 0 2em;
     display: flex;
@@ -30,34 +30,34 @@ nav{
     gap: 2em;
 }
 
-.nav-list>li{
+.nav-list>li {
     list-style: none;
-    color:white;
+    color: white;
     font-weight: bold;
     letter-spacing: .1em;
 }
 
-h1{
+h1 {
     font-size: 2.8rem;
     text-align: center;
     text-transform: uppercase;
     text-shadow: .1em .1em rgba(46, 50, 255, 0.2);
 }
 
-main{
+main {
     display: flex;
     flex-direction: column;
     margin-top: 2rem;
 }
 
-h2{
+h2 {
     margin: 0;
     padding: 0;
     font-size: 2em;
-    margin-left:1.6em;
+    margin-left: 1.6em;
 }
 
-.gestor-eventos{
+.gestor-eventos {
     max-width: 60em;
     height: 70vh;
     border-radius: 1em;
@@ -67,17 +67,17 @@ h2{
     margin-left: 3em;
 }
 
-.lista-eventos{
+.lista-eventos {
     width: 95%;
     height: auto;
     display: flex;
     flex-direction: column;
 }
 
-.evento{
+.evento {
     min-width: 290px;
     margin-top: 1em;
-    border: solid 0.12em ;
+    border: solid 0.12em;
     border-radius: .5em;
     gap: 0.5em 1.5em;
     background: linear-gradient(25deg, slateblue 20%, blue 40%, grey 80%, rgb(233, 233, 233));
@@ -87,35 +87,54 @@ h2{
     align-items: center;
     padding-left: 1em;
     text-overflow: ellipsis;
-
 }
 
-.datos{
+.blink {
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: initial;
+    }
+
+    50% {
+        opacity: 30%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+    
+.datos {
     width: 75%;
     display: flex;
     flex-direction: column;
 
 }
 
-.encabezado-evento{
+.encabezado-evento {
     display: flex;
     flex-flow: row wrap;
     align-items: baseline;
     gap: .5em 1em;
 }
 
-.nombre-local{
+.nombre-local {
     font-size: 180%;
     margin-top: .2em;
     margin-bottom: 0;
     text-transform: uppercase;
 }
 
-.numero-local{
+.numero-local {
     font-weight: bold;
 }
 
-.texto-servicio{
+.texto-servicio {
     margin-top: .1em;
     margin-bottom: .2em;
     font-size: 250%;
@@ -126,7 +145,7 @@ h2{
     text-overflow: ellipsis;
 }
 
-.horario{
+.horario {
     width: 20%;
     display: flex;
     flex-direction: column;
@@ -134,7 +153,8 @@ h2{
     align-items: center;
 }
 
-.hora-evento, .reloj{
+.hora-evento,
+.reloj {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,15 +165,19 @@ h2{
     margin: auto;
 }
 
-.evento:hover{
+.evento:hover {
     background: linear-gradient(25deg, blue 10%, lightblue 50%, rgb(233, 233, 233));
     transition: all .2s ease-in-out;
-    .texto-servicio{
+
+    .texto-servicio {
         font-size: 300%;
         margin-bottom: 0;
         letter-spacing: .1em;
-    };
-    .encabezado-evento{
+    }
+
+    ;
+
+    .encabezado-evento {
         margin-bottom: -.1em;
     }
 }
@@ -162,9 +186,9 @@ h2{
 
 
 
-@media (width <= 460px) {
+@media (width <=460px) {
 
-    .nav-list{
+    .nav-list {
         height: 100%;
         margin: 0 2em;
         padding: 0;
@@ -175,18 +199,18 @@ h2{
         justify-content: space-evenly;
     }
 
-    .main{
+    .main {
         margin: 2em 1em 0 1em;
     }
-    
-    h2{
+
+    h2 {
         text-align: center;
         margin: 0 1em;
         padding: 0;
         font-size: 2rem;
     }
 
-    .gestor-eventos{
+    .gestor-eventos {
         max-width: 60em;
         height: 70vh;
         border-radius: 1em;
@@ -196,13 +220,13 @@ h2{
         margin: 0 1em;
     }
 
-    .lista-eventos{
+    .lista-eventos {
         height: auto;
         display: flex;
         flex-direction: column;
     }
 
-    .evento{
+    .evento {
         margin-top: 1em;
         border: solid 0.12em;
         border-radius: .5em;
@@ -218,7 +242,7 @@ h2{
         text-overflow: ellipsis;
     }
 
-    .datos{
+    .datos {
         width: 75%;
         display: flex;
         flex-direction: column;
@@ -226,7 +250,7 @@ h2{
         flex-wrap: nowrap;
     }
 
-    .encabezado-evento{
+    .encabezado-evento {
         display: flex;
         flex-flow: row wrap;
         align-items: center;
@@ -236,7 +260,7 @@ h2{
         justify-content: center;
     }
 
-    .texto-servicio{
+    .texto-servicio {
         margin-top: .1em;
         margin-bottom: .2em;
         font-size: 250%;
@@ -248,7 +272,7 @@ h2{
         text-overflow: ellipsis;
     }
 
-    .horario{
+    .horario {
         width: auto;
         display: flex;
         flex-direction: column;
@@ -257,7 +281,8 @@ h2{
         align-items: center;
     }
 
-    .hora-evento, .reloj{
+    .hora-evento,
+    .reloj {
         display: flex;
         font-size: 150%;
         text-transform: uppercase;
@@ -265,16 +290,20 @@ h2{
         margin: auto;
     }
 
-    .evento:hover{
+    .evento:hover {
         background: linear-gradient(25deg, blue 10%, lightblue 50%, rgb(233, 233, 233));
         transition: all .2s ease-in-out;
-        .texto-servicio{
+
+        .texto-servicio {
             font-size: 250%;
             margin-top: .1em;
-            letter-spacing: normal ;
+            letter-spacing: normal;
             margin-bottom: .2em;
-        };
-        .encabezado-evento{
+        }
+
+        ;
+
+        .encabezado-evento {
             margin-bottom: 0;
         }
     }
